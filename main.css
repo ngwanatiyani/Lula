@@ -1,0 +1,86 @@
+body {
+    background: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+.glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gradient-border {
+    position: relative;
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid transparent;
+    background-clip: padding-box;
+}
+
+.gradient-border::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background: linear-gradient(135deg, #34d399, #3b82f6);
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0.4;
+}
+
+.input-focus:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.skeleton {
+    background: #1e293b;
+    background-image: linear-gradient(to right, #1e293b 0%, #334155 20%, #1e293b 40%, #1e293b 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-left-color: #34d399;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#quickView,
+#settingsPanel {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.translate-x-full {
+    transform: translateX(100%);
+}
