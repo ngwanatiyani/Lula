@@ -1,7 +1,7 @@
 const CONFIG = { 
-    ID: "41f4dfcd", 
-    KEY: "27171867ccdf988acde7d66024f3b272", 
-    URL: "https://api.adzuna.com/v1/api/jobs/za/search/1" 
+    ID: "*********", 
+    KEY: "******", 
+    URL: "**********" 
 };
 
 const ZA_CURRENCY = new Intl.NumberFormat('en-ZA', { 
@@ -319,3 +319,4 @@ function boot() {
 
 // Initialize app on page load
 window.addEventListener('DOMContentLoaded', boot);
+
